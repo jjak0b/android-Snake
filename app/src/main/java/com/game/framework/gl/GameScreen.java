@@ -123,6 +123,5 @@ public abstract class GameScreen {
 	public void setResetTouchMode(boolean resetTouchMode) {
 		this.resetTouchMode = resetTouchMode;
 	}
-	
-    
+
 }

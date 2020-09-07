@@ -15,7 +15,6 @@ public class GameBackgroundAtlas {
 	
 	private static GL10 gl;
 
-	
 	private static int backTextureId;
 	private static int minFilter;
 	private static int magFilter;
@@ -29,7 +28,8 @@ public class GameBackgroundAtlas {
     	loadBackgrounds();
     }
     
-	/*public GameBackgroundAtlas(GL10 gl, IOManager ioManager) {
+	/*
+	public GameBackgroundAtlas(GL10 gl, IOManager ioManager) {
 		this.gl = gl;
 		this.ioManager = ioManager;
 		loadBackgrounds();

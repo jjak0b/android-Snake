@@ -18,6 +18,10 @@ public class PhGameScoresScreen extends GameScreen {
 	
 	private GameObject backButton;
 	private GameObject background;
+
+	private Text2D test;
+	private int c = 65;
+
 	//private PhGameFont font;
 	private StringBuilder text;
 	
@@ -26,6 +30,8 @@ public class PhGameScoresScreen extends GameScreen {
 		backButton=new GameObject(350, 50,254,46,GameAtlas.getGameImage(193, 289, 254, 46),GameObject.CollisionMask.NONE);
 		background = new GameObject(240,400,480,800,GameBackgroundAtlas.getBackgroundImage(1440, 0, 480, 800),GameObject.CollisionMask.NONE);
         setResetTouchMode(true);
+
+		test = new Text2D( " "	, 1f, 5, 500);
       /*  try {
 			Options.load();
 		} catch (ResourceException e) {
@@ -40,8 +46,6 @@ public class PhGameScoresScreen extends GameScreen {
 		 	PhGameMenuScreen menuScreen=new PhGameMenuScreen(game, context, gl10);
 			game.setCurrentScreen(menuScreen);
 		}
-		
-		
 	}
 
 	@Override
@@ -66,6 +70,7 @@ public class PhGameScoresScreen extends GameScreen {
 		}*/
 		
 		backButton.draw(gl10);
+		test.drawText(gl10);
 		gl10.glDisable(GL10.GL_BLEND);
 	}
 

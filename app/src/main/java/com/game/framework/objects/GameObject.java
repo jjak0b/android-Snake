@@ -39,6 +39,17 @@ public class GameObject {
 		this.collisionMask = collisionMask;
 	}
 
+	public GameObject(GameObject gameObject) {
+		this.x = gameObject.getX();
+		this.y = gameObject.getY();
+		this.width = gameObject.getWidth();
+		this.height = gameObject.getHeight();
+		this.gameImage = gameObject.getGameImage();
+		this.mesh = new GameObjectMesh(this.x, this.y, this.width, this.height);
+		this.mesh.mapTextureUV(this.gameImage);
+		this.collisionMask = gameObject.getCollisionMask();
+	}
+
 	public GameObject(float x, float y, int width, int height,
 			GameAnimation gameImageAnimation, CollisionMask collisionMask) {
 		this.x = x;
