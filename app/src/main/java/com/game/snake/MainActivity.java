@@ -3,7 +3,10 @@ package com.game.snake;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Point;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -26,6 +29,7 @@ public class MainActivity extends Activity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 		context=this;
 		activity=this;
 		game = new SnakeGame(this, "MainActivity");
@@ -49,7 +53,5 @@ public class MainActivity extends Activity {
 		game.onPause(isFinishing());
 		gameView.onPause();
 	}
-
-
 }
 

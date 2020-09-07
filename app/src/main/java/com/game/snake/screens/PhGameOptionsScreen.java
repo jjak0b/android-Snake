@@ -87,6 +87,7 @@ public class PhGameOptionsScreen extends GameScreen {
 		medDifficultButton.draw(gl10);
 		hardDifficultButton.draw(gl10);
 		backButton.draw(gl10);
+
 		gl10.glDisable(GL10.GL_BLEND);
 	}
 

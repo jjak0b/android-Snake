@@ -10,6 +10,9 @@ import android.opengl.GLSurfaceView;
 import android.view.MotionEvent;
 import android.view.View;
 
+// guarda:
+// https://blog.jayway.com/2013/05/09/opengl-es-2-0-tutorial-for-android-part-i-getting-started/
+// https://costimuraru.wordpress.com/2012/03/25/android-using-opengl-the-easy-way/
 
 public abstract class GameView extends GLSurfaceView {
 
@@ -72,6 +75,7 @@ public abstract class GameView extends GLSurfaceView {
 
 		@Override
 		public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+
 			gl.glViewport(0, 0, getWidth(), getHeight());
 			gl.glClearColor(0, 0, 0, 1);
 			gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
